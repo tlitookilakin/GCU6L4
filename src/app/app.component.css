@@ -1,0 +1,67 @@
+main {
+    max-width: 500px;
+    margin: auto;
+    background-color: #fff;
+    overflow: auto;
+    padding: 2em;
+    text-align: center;
+    border: 2px solid red;
+}
+
+h1 {
+    color: red;
+    font-family: cursive;
+}
+
+table {
+    width: 100%;
+    overflow:hidden;
+    text-align: left;
+}
+
+td > button {
+    width: 100%;
+}
+
+tr.veggie {
+    color: green;
+}
+
+.nostock td {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+tr.nostock {
+    position: relative;
+    overflow: hidden;
+}
+
+tr.nostock::after {
+    content: "SOLD\0020OUT";
+    position: absolute;
+    animation: marquee 5s linear infinite;
+    display: inline-block;
+    width: 9em;
+    font-weight: bold;
+    color: red;
+    top: 0px;
+    bottom: 0px;
+}
+
+#order-total {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+@keyframes marquee {
+    from {
+        left: 0%;
+        transform: translateX(-100%);
+    }
+    to {
+        left: 100%;
+        transform: translateX(0%);
+    }
+}
